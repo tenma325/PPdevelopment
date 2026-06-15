@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="tenma325 のポートフォリオ。Kaikei、ギャル行政課、devepopment を一つの界面でつなぐ。">
+    <title>Portfolio — tenma325</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/mark.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="bg-dots" aria-hidden="true"></div>
+    <canvas id="flow-canvas" aria-hidden="true"></canvas>
+
+    <svg class="svg-defs" aria-hidden="true">
+      <defs>
+        <linearGradient id="gold-stroke" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#c9b8a0" stop-opacity="0.95"/>
+          <stop offset="100%" stop-color="#a78b71" stop-opacity="0.85"/>
+        </linearGradient>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="18" result="blur"/>
+          <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+        </filter>
+      </defs>
+    </svg>
+
+    <a class="skip-link" href="#works">内容へスキップ</a>
+
+    <!-- Navigation -->
+    <header class="site-header" data-reveal="fade-down">
+      <div class="header-inner">
+        <a class="brand-lockup" href="#" aria-label="tenma325 portfolio home">
+          <em class="brand-logo">Portfolio</em>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#works">INDEX</a>
+          <a href="#features">特徴</a>
+        </nav>
+
+        <a class="cta-pill" href="mailto:llz@outlook.jp">問い合わせ</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero: Neural ring of works -->
+      <section class="neural-hero" id="home" aria-label="Portfolio">
+        <div class="neural-surface" aria-hidden="true">
+          <svg class="node-lines" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1200 800">
+            <g class="node-line-group" fill="none" stroke-width="2.5">
+              <path class="node-line" d="M600,400 C600,200 420,180 280,260" />
+              <path class="node-line node-line--dashed" d="M600,400 C600,200 420,180 280,260" />
+              <path class="node-line" d="M600,400 C740,200 920,180 980,260" />
+              <path class="node-line node-line--dashed" d="M600,400 C740,200 920,180 980,260" />
+              <path class="node-line" d="M600,400 C600,620 600,680 600,720" />
+              <path class="node-line node-line--dashed" d="M600,400 C600,620 600,680 600,720" />
+            </g>
+          </svg>
+
+          <div class="central-node">
+            <div class="glass-card central-card">
+              <div class="central-glow"></div>
+              <span class="central-pulse"><span></span></span>
+              <div class="central-meta">
+                <span class="central-label">COLLABORATION</span>
+                <strong class="central-title">あなたと作る、<br>一つの世界。</strong>
+                <span class="central-role">design · develop · deliver</span>
+              </div>
+            </div>
+          </div>
+
+          <article class="satellite-card satellite-card--left" data-reveal="orbit-left" style="--orbit-delay:0s">
+            <a class="satellite-inner" href="#" aria-label="Kaikei.family を開く">
+              <h2 class="satellite-title">Kaikei.family</h2>
+              <div class="satellite-media">
+                <img src="./assets/kaikei-thumb.jpg" alt="Kaikei.family サイトのスクリーンショット" loading="eager">
+              </div>
+              <p class="satellite-concept">家族みんなで、おカネの流れを。</p>
+              <span class="satellite-link">サイトを開く →</span>
+            </a>
+          </article>
+
+          <article class="satellite-card satellite-card--right" data-reveal="orbit-right" style="--orbit-delay:.15s">
+            <a class="satellite-inner" href="#" aria-label="ギャル行政課 を開く">
+              <h2 class="satellite-title">ギャル行政課</h2>
+              <div class="satellite-media">
+                <img src="./assets/gyaru-gov-thumb.jpg" alt="ギャル行政課 サイトのスクリーンショット" loading="eager">
+              </div>
+              <p class="satellite-concept">かたい役所を、やさしくひらく。</p>
+              <span class="satellite-link">サイトを開く →</span>
+            </a>
+          </article>
+
+          <article class="satellite-card satellite-card--bottom" data-reveal="orbit-up" style="--orbit-delay:.3s">
+            <a class="satellite-inner" href="#" aria-label="devepopment を開く">
+              <h2 class="satellite-title">devepopment</h2>
+              <div class="satellite-media">
+                <img src="./assets/devepopment-thumb.jpg" alt="devepopment サイトのスクリーンショット" loading="eager">
+              </div>
+              <p class="satellite-concept">つくる楽しさに、ときめきを。</p>
+              <span class="satellite-link">サイトを開く →</span>
+            </a>
+          </article>
+        </div>
+
+        <div class="hero-cta" data-reveal="fade-up" data-reveal-delay=".5s">
+          <a class="hero-btn hero-btn--solid" href="#works">INDEX へ</a>
+          <a class="hero-btn hero-btn--ghost" href="#features">お届けする力</a>
+        </div>
+      </section>
+
+      <!-- Features Grid -->
+      <section class="features" id="features" data-reveal="fade-up">
+        <header class="section-header">
+          <span class="eyebrow">CAPABILITIES</span>
+          <h2 class="section-title">お届けする力</h2>
+        </header>
+        <p class="features-lead">設計から実装まで、言語・形を問わずニーズに沿った世界をお届けします。</p>
+        <div class="features-timeline">
+          <article class="timeline-step glass-card">
+            <span class="timeline-num">01</span>
+            <h3>ヒアリング</h3>
+            <p>あなたの課題とビジョンを深く理解するところから始めます。</p>
+          </article>
+          <article class="timeline-step glass-card">
+            <span class="timeline-num">02</span>
+            <h3>設計・デザイン</h3>
+            <p>ワイヤーフレームからビジュアルまで、世界観を形に落とし込みます。</p>
+          </article>
+          <article class="timeline-step glass-card">
+            <span class="timeline-num">03</span>
+            <h3>実装・開発</h3>
+            <p>React、Vite、または最適なスタックで、高品質なコードを届けます。</p>
+          </article>
+          <article class="timeline-step glass-card">
+            <span class="timeline-num">04</span>
+            <h3>公開・運用</h3>
+            <p>デプロイから運用サポートまで、最後まで伴走します。</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Works Index -->
+      <section class="works-index" id="works" data-reveal="fade-up">
+        <header class="section-header">
+          <h2 class="section-title">INDEX</h2>
+        </header>
+        <ol class="works-list">
+          <li class="work-item">
+            <a href="#">
+              <em class="work-index">01</em>
+              <strong class="work-name">Kaikei.family</strong>
+              <span class="work-desc">家族向け家計簿アプリ。パパ・ママ・子どもの支出をひとつのダッシュボードで見える化。</span>
+            </a>
+          </li>
+          <li class="work-screenshot">
+            <img src="./assets/kaikei-thumb.jpg" alt="Kaikei.family スクリーンショット" loading="lazy">
+          </li>
+          <li class="work-item">
+            <a href="#">
+              <em class="work-index">02</em>
+              <strong class="work-name">ギャル行政課</strong>
+              <span class="work-desc">架空自治体ポータル。固い行政を、ゆるくて親しみやすいトーンとビジュアルでひらく。</span>
+            </a>
+          </li>
+          <li class="work-screenshot">
+            <img src="./assets/gyaru-gov-thumb.jpg" alt="ギャル行政課 スクリーンショット" loading="lazy">
+          </li>
+          <li class="work-item">
+            <a href="#">
+              <em class="work-index">03</em>
+              <strong class="work-name">devepopment</strong>
+              <span class="work-desc">個人開発ラボのポートフォリオ。パステルとぷにぷにモーションで、つくる喜びを伝える。</span>
+            </a>
+          </li>
+          <li class="work-screenshot">
+            <img src="./assets/devepopment-thumb.jpg" alt="devepopment スクリーンショット" loading="lazy">
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <nav class="footer-col">
+          <h4>NAVIGATION</h4>
+          <a href="#works">INDEX</a>
+          <a href="#features">お届けする力</a>
+        </nav>
+
+        <nav class="footer-col">
+          <h4>SITES</h4>
+          <a href="#">Kaikei.family</a>
+          <a href="#">ギャル行政課</a>
+          <a href="#">devepopment</a>
+        </nav>
+
+        <div class="footer-col">
+          <h4>STACK</h4>
+          <div class="stack-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>TypeScript</span>
+            <span>React</span>
+            <span>Vue</span>
+            <span>Next.js</span>
+            <span>Vite</span>
+            <span>Tailwind CSS</span>
+            <span>Figma</span>
+            <span>Node.js</span>
+            <span>Python</span>
+            <span>PostgreSQL</span>
+            <span>SQLite</span>
+            <span>Git</span>
+            <span>Vercel</span>
+            <span>Framer Motion</span>
+            <span>Obsidian</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 tenma325</span>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
