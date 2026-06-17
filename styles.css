@@ -380,6 +380,12 @@ body {
 .satellite-card--right { right: 0; top: 50%; transform: translateY(-50%) translateX(20px); }
 .satellite-card--bottom { bottom: 20px; left: 50%; transform: translateX(-50%) translateY(20px); }
 .satellite-card--top { top: 20px; left: 50%; transform: translateX(-50%) translateY(-20px); }
+.satellite-card--top.revealed {
+  transform: translateX(-50%) translateY(0);
+}
+.satellite-card--bottom.revealed {
+  transform: translateX(-50%) translateY(0);
+}
 
 .satellite-card.revealed {
   opacity: 1;
