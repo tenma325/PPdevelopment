@@ -290,7 +290,7 @@ body {
 
 .central-card {
   position: relative;
-  width: min(420px, 80vw);
+  width: 35%;
   aspect-ratio: 16 / 9;
   display: grid;
   place-items: center;
@@ -371,15 +371,15 @@ body {
 .satellite-card {
   position: absolute;
   z-index: 3;
-  width: min(290px, 24vw);
+  width: 24.1%;
   opacity: 0;
   transform: translateY(30px);
 }
 
 .satellite-card--left { left: 0; top: 50%; transform: translateY(-50%) translateX(-20px); }
 .satellite-card--right { right: 0; top: 50%; transform: translateY(-50%) translateX(20px); }
-.satellite-card--bottom { bottom: 20px; left: 50%; transform: translateX(-50%) translateY(20px); }
-.satellite-card--top { top: 20px; left: 50%; transform: translateX(-50%) translateY(-20px); }
+.satellite-card--bottom { bottom: 3%; left: 50%; transform: translateX(-50%) translateY(20px); }
+.satellite-card--top { top: 3%; left: 50%; transform: translateX(-50%) translateY(-20px); }
 .satellite-card--top.revealed {
   transform: translateX(-50%) translateY(0);
 }
