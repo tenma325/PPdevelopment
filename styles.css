@@ -379,6 +379,7 @@ body {
 .satellite-card--left { left: 0; top: 50%; transform: translateY(-50%) translateX(-20px); }
 .satellite-card--right { right: 0; top: 50%; transform: translateY(-50%) translateX(20px); }
 .satellite-card--bottom { bottom: -60px; left: 50%; transform: translateX(-50%) translateY(20px); }
+.satellite-card--top { top: -40px; left: 50%; transform: translateX(-50%) translateY(-20px); }
 
 .satellite-card.revealed {
   opacity: 1;
@@ -386,6 +387,9 @@ body {
   transition: opacity 0.9s var(--ease-reveal), transform 0.9s var(--ease-reveal);
 }
 .satellite-card--bottom.revealed {
+  transform: translateX(-50%) translateY(0);
+}
+.satellite-card--top.revealed {
   transform: translateX(-50%) translateY(0);
 }
 
