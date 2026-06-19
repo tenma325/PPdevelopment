@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css?v=4">
+    <link rel="stylesheet" href="./styles.css?v=5">
   </head>
   <body>
     <div class="bg-dots" aria-hidden="true"></div>
@@ -40,7 +40,6 @@
         <nav class="site-nav" aria-label="Primary navigation">
           <a href="#works">INDEX</a>
           <a href="#features">特徴</a>
-          <a href="#museum">幾何学博物館</a>
         </nav>
 
         <a class="cta-pill" href="mailto:llz@outlook.jp">問い合わせ</a>
@@ -65,6 +64,9 @@
               <!-- Center to Top (devepopment) -->
               <path class="node-line" d="M600,290 C600,260 600,260 600,222" />
               <path class="node-line node-line--dashed" d="M600,290 C600,260 600,260 600,222" />
+              <!-- Center to Bottom-Right (幾何学博物館) -->
+              <path class="node-line" d="M780,420 C850,480 880,520 920,580" />
+              <path class="node-line node-line--dashed" d="M780,420 C850,480 880,520 920,580" />
             </g>
           </svg>
 
@@ -113,13 +115,24 @@
             </a>
           </article>
 
-          <article class="satellite-card satellite-card--top" data-reveal="fade-down" style="--orbit-delay:.45s" id="museum">
+          <article class="satellite-card satellite-card--top" data-reveal="fade-down" style="--orbit-delay:.45s">
             <a class="satellite-inner" href="https://tenma325.github.io/PPdevelopment/" target="_blank" rel="noopener" aria-label="devepopment を開く">
               <h2 class="satellite-title">devepopment</h2>
               <div class="satellite-media">
                 <img src="./assets/devepopment-thumb.jpg" alt="devepopment サイトのスクリーンショット" loading="eager">
               </div>
               <p class="satellite-concept">つくる楽しさに、ときめきを。</p>
+              <span class="satellite-link">サイトを開く →</span>
+            </a>
+          </article>
+
+          <article class="satellite-card satellite-card--bottom-right" data-reveal="orbit-right" style="--orbit-delay:.6s" id="museum">
+            <a class="satellite-inner" href="https://tenma325.github.io/geometry-museum/" target="_blank" rel="noopener" aria-label="幾何学博物館 を開く">
+              <h2 class="satellite-title">幾何学博物館</h2>
+              <div class="satellite-media">
+                <img src="./assets/museum-14.jpg" alt="幾何学博物館 サイトのスクリーンショット" loading="eager">
+              </div>
+              <p class="satellite-concept">名前のないデザインの博物館。</p>
               <span class="satellite-link">サイトを開く →</span>
             </a>
           </article>
@@ -229,7 +242,6 @@
           <h4>NAVIGATION</h4>
           <a href="#works">INDEX</a>
           <a href="#features">お届けする力</a>
-          <a href="#museum">幾何学博物館</a>
         </nav>
 
         <nav class="footer-col">
