@@ -374,7 +374,7 @@ body {
 .satellite-card {
   position: absolute;
   z-index: 3;
-  width: 24.1%;
+  width: 21%;
   opacity: 0;
   transform: translateY(30px);
 }
