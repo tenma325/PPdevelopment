@@ -30,22 +30,6 @@
 
     <a class="skip-link" href="#works">内容へスキップ</a>
 
-    <!-- Connection Layer: Central Concept Tile -> Geometry Museum -->
-    <div class="connection-layer" aria-hidden="true">
-      <svg class="connection-svg" preserveAspectRatio="none">
-        <defs>
-          <linearGradient id="connection-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#c9b8a0" stop-opacity="0.9"/>
-            <stop offset="50%" stop-color="#a78b71" stop-opacity="0.55"/>
-            <stop offset="100%" stop-color="#a78b71" stop-opacity="0.15"/>
-          </linearGradient>
-        </defs>
-        <g class="connection-paths" fill="none" stroke="url(#connection-gradient)" stroke-width="2" stroke-linecap="round">
-          <!-- Paths injected by JS -->
-        </g>
-      </svg>
-    </div>
-
     <!-- Navigation -->
     <header class="site-header" data-reveal="fade-down">
       <div class="header-inner">
@@ -69,14 +53,24 @@
         <div class="neural-surface" aria-hidden="true">
           <svg class="node-lines" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1200 750">
             <g class="node-line-group" fill="none" stroke-width="2.5">
-              <path class="node-line" d="M390,375 C340,250 340,250 290,375" />
-              <path class="node-line node-line--dashed" d="M390,375 C340,250 340,250 290,375" />
-              <path class="node-line" d="M810,375 C860,250 860,250 910,375" />
-              <path class="node-line node-line--dashed" d="M810,375 C860,250 860,250 910,375" />
-              <path class="node-line" d="M600,493 C600,510 600,510 600,527" />
-              <path class="node-line node-line--dashed" d="M600,493 C600,510 600,510 600,527" />
-              <path class="node-line" d="M600,257 C600,240 600,240 600,222" />
-              <path class="node-line node-line--dashed" d="M600,257 C600,240 600,240 600,222" />
+              <!-- Center to Left (Kaikei) -->
+              <path class="node-line" d="M420,375 C370,250 370,250 290,375" />
+              <path class="node-line node-line--dashed" d="M420,375 C370,250 370,250 290,375" />
+              <!-- Center to Right (ギャル行政課) -->
+              <path class="node-line" d="M780,375 C830,250 830,250 910,375" />
+              <path class="node-line node-line--dashed" d="M780,375 C830,250 830,250 910,375" />
+              <!-- Center to Bottom (LUMIÈRE) -->
+              <path class="node-line" d="M600,460 C600,490 600,490 600,527" />
+              <path class="node-line node-line--dashed" d="M600,460 C600,490 600,490 600,527" />
+              <!-- Center to Top (devepopment) -->
+              <path class="node-line" d="M600,290 C600,260 600,260 600,222" />
+              <path class="node-line node-line--dashed" d="M600,290 C600,260 600,260 600,222" />
+              <!-- Center to Bottom-Right (幾何学博物館) -->
+              <path class="node-line" d="M780,420 C850,480 880,520 920,580" />
+              <path class="node-line node-line--dashed" d="M780,420 C850,480 880,520 920,580" />
+              <!-- Center to Bottom-Left (hidden balance) -->
+              <path class="node-line" d="M420,420 C350,480 320,520 280,580" />
+              <path class="node-line node-line--dashed" d="M420,420 C350,480 320,520 280,580" />
             </g>
           </svg>
 
@@ -132,6 +126,17 @@
                 <img src="./assets/devepopment-thumb.jpg" alt="devepopment サイトのスクリーンショット" loading="eager">
               </div>
               <p class="satellite-concept">つくる楽しさに、ときめきを。</p>
+              <span class="satellite-link">サイトを開く →</span>
+            </a>
+          </article>
+
+          <article class="satellite-card satellite-card--bottom-right" data-reveal="orbit-right" style="--orbit-delay:.6s" id="museum">
+            <a class="satellite-inner" href="https://tenma325.github.io/geometry-museum/" target="_blank" rel="noopener" aria-label="幾何学博物館 を開く">
+              <h2 class="satellite-title">幾何学博物館</h2>
+              <div class="satellite-media">
+                <img src="./assets/museum-14.jpg" alt="幾何学博物館 サイトのスクリーンショット" loading="eager">
+              </div>
+              <p class="satellite-concept">名前のないデザインの博物館。</p>
               <span class="satellite-link">サイトを開く →</span>
             </a>
           </article>
@@ -220,79 +225,17 @@
           <li class="work-screenshot">
             <img src="./assets/devepopment-thumb.jpg" alt="devepopment スクリーンショット" loading="lazy">
           </li>
+          <li class="work-item">
+            <a href="https://tenma325.github.io/geometry-museum/" target="_blank" rel="noopener">
+              <em class="work-index">05</em>
+              <strong class="work-name">幾何学博物館</strong>
+              <span class="work-desc">14の展示室で定義から崩壊までを順に提示するインタラクティブWebアプリ。WebGL2シェーダー、Obsidian連携。</span>
+            </a>
+          </li>
+          <li class="work-screenshot">
+            <img src="./assets/museum-14.jpg" alt="幾何学博物館 スクリーンショット" loading="lazy">
+          </li>
         </ol>
-      </section>
-
-      <!-- Connection continuation: from works-index into museum -->
-      <div class="connection-anchor" id="museum-anchor" aria-hidden="true"></div>
-
-      <!-- Geometry Museum -->
-      <section class="museum-section" id="museum" data-reveal="fade-up">
-        <header class="section-header">
-          <span class="eyebrow">FEATURED WORK</span>
-          <h2 class="section-title">幾何学博物館</h2>
-          <p class="section-lead">幾何学と呼ばれる、名前のないデザインの博物館 — 14の展示室で定義から崩壊までを順に提示する、インタラクティブなWebアプリケーション。</p>
-        </header>
-
-        <div class="museum-grid">
-          <a class="museum-card glass-card" href="https://tenma325.github.io/geometry-museum/" target="_blank" rel="noopener" aria-label="幾何学博物館を開く">
-            <div class="museum-media">
-              <img src="./assets/museum-14.jpg" alt="展示室 00 初期化" loading="lazy">
-            </div>
-            <div class="museum-meta">
-              <span class="museum-num">01</span>
-              <h3 class="museum-name">定義 — ユークリッド構成</h3>
-              <p class="museum-desc">点・線・面の公理的基礎。コンパスと定規で描く、幾何学の出発点。</p>
-            </div>
-          </a>
-
-          <a class="museum-card glass-card" href="https://tenma325.github.io/geometry-museum/" target="_blank" rel="noopener" aria-label="幾何学博物館を開く">
-            <div class="museum-media">
-              <img src="./assets/museum-52.jpg" alt="位相 トーラス" loading="lazy">
-            </div>
-            <div class="museum-meta">
-              <span class="museum-num">02</span>
-              <h3 class="museum-name">位相 — トーラス/クライン</h3>
-              <p class="museum-desc">連続変形と分類。トーラスからクライン壷まで、形の同一性とは。</p>
-            </div>
-          </a>
-
-          <a class="museum-card glass-card" href="https://tenma325.github.io/geometry-museum/" target="_blank" rel="noopener" aria-label="幾何学博物館を開く">
-            <div class="museum-media">
-              <img src="./assets/museum-55.jpg" alt="フラクタル 自己相似" loading="lazy">
-            </div>
-            <div class="museum-meta">
-              <span class="museum-num">03</span>
-              <h3 class="museum-name">フラクタル — 自己相似</h3>
-              <p class="museum-desc">無限の入れ子。海岸線からマンデルブロまで、自然の幾何学的言語。</p>
-            </div>
-          </a>
-
-          <a class="museum-card glass-card" href="https://tenma325.github.io/geometry-museum/" target="_blank" rel="noopener" aria-label="幾何学博物館を開く">
-            <div class="museum-media">
-              <img src="./assets/museum-51.jpg" alt="YSアーカイブ" loading="lazy">
-            </div>
-            <div class="museum-meta">
-              <span class="museum-num">04</span>
-              <h3 class="museum-name">YSアーカイブ — 生成出力</h3>
-              <p class="museum-desc">Yordan Stoyanov による Generator Outputs 19フレーム。磁気劣化の記録。</p>
-            </div>
-          </a>
-        </div>
-
-        <div class="museum-cta" data-reveal="fade-up" data-reveal-delay=".2s">
-          <a class="hero-btn hero-btn--solid" href="https://tenma325.github.io/geometry-museum/" target="__blank" rel="noopener">博物館を開く</a>
-          <a class="hero-btn hero-btn--ghost" href="https://github.com/tenma325/geometry-museum" target="_blank" rel="noopener">GitHub</a>
-        </div>
-
-        <ul class="museum-tags">
-          <li>Three.js</li>
-          <li>WebGL2</li>
-          <li>Vite</li>
-          <li>Vanilla JS</li>
-          <li>Glassmorphism</li>
-          <li>Obsidian</li>
-        </ul>
       </section>
     </main>
 
@@ -303,6 +246,7 @@
           <h4>NAVIGATION</h4>
           <a href="#works">INDEX</a>
           <a href="#features">お届けする力</a>
+          <a href="#museum">幾何学博物館</a>
         </nav>
 
         <nav class="footer-col">
