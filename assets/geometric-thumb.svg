@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" role="img" aria-label="幾何学博物館">
+  <rect width="400" height="225" fill="#0a0a0a"/>
+  <!-- warped flow-field lines, monochrome like the exhibit -->
+  <g fill="none" stroke="#f5f4ef" stroke-linecap="round">
+    <path d="M-10,40 C80,20 140,90 200,70 S330,10 410,50" stroke-width="1.2" opacity="0.85"/>
+    <path d="M-10,60 C80,42 145,108 205,88 S335,32 410,70" stroke-width="1" opacity="0.7"/>
+    <path d="M-10,82 C85,66 150,128 210,108 S340,56 410,92" stroke-width="0.9" opacity="0.55"/>
+    <path d="M-10,106 C90,92 155,150 215,130 S345,82 410,116" stroke-width="0.8" opacity="0.45"/>
+    <path d="M-10,132 C95,120 160,174 220,154 S350,110 410,142" stroke-width="0.8" opacity="0.38"/>
+    <path d="M-10,160 C100,150 165,198 225,178 S355,140 410,170" stroke-width="0.7" opacity="0.3"/>
+    <path d="M-10,188 C105,180 170,220 230,202 S360,170 410,196" stroke-width="0.7" opacity="0.22"/>
+  </g>
+  <!-- dither dots -->
+  <g fill="#f5f4ef">
+    <circle cx="60" cy="150" r="1" opacity="0.5"/>
+    <circle cx="95" cy="185" r="1.2" opacity="0.4"/>
+    <circle cx="150" cy="55" r="1" opacity="0.6"/>
+    <circle cx="245" cy="40" r="1.2" opacity="0.5"/>
+    <circle cx="300" cy="165" r="1" opacity="0.45"/>
+    <circle cx="345" cy="200" r="1.2" opacity="0.35"/>
+    <circle cx="370" cy="35" r="1" opacity="0.55"/>
+  </g>
+  <text x="24" y="205" font-family="Arial, sans-serif" font-size="10" fill="#888" letter-spacing="4">GEOMETRIC MUSEUM — WEBGL2</text>
+</svg>
