@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="description" content="tenma325 のポートフォリオ。Kaikei、ギャル行政課、devepopment、LUMIÈRE Residences、幾何学博物館 を一つの界面でつなぐ。">
+    <meta name="description" content="tenma325 のポートフォリオ。Kaikei、ギャル行政課、devepopment、LUMIÈRE Residences、幾何学博物館、静寂と混沌を一つの界面でつなぐ。">
     <title>Portfolio — tenma325</title>
     <link rel="icon" type="image/svg+xml" href="./assets/mark.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,23 +50,20 @@
       <!-- Hero: Neural ring of works -->
       <section class="neural-hero" id="home" aria-label="Portfolio">
         <div class="neural-surface" aria-hidden="true">
-          <svg class="node-lines" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1200 750">
+          <svg class="node-lines" preserveAspectRatio="none" viewBox="0 0 1200 900">
             <g class="node-line-group" fill="none" stroke-width="2.5">
-              <!-- Center to Left (Kaikei) -->
-              <path class="node-line" d="M420,375 C370,250 370,250 290,375" />
-              <path class="node-line node-line--dashed" d="M420,375 C370,250 370,250 290,375" />
-              <!-- Center to Right (ギャル行政課) -->
-              <path class="node-line" d="M780,375 C830,250 830,250 910,375" />
-              <path class="node-line node-line--dashed" d="M780,375 C830,250 830,250 910,375" />
-              <!-- Center to Bottom (LUMIÈRE) -->
-              <path class="node-line" d="M600,460 C600,490 600,490 600,527" />
-              <path class="node-line node-line--dashed" d="M600,460 C600,490 600,490 600,527" />
-              <!-- Center to Top (devepopment) -->
-              <path class="node-line" d="M600,290 C600,260 600,260 600,222" />
-              <path class="node-line node-line--dashed" d="M600,290 C600,260 600,260 600,222" />
-              <!-- Center to Bottom-Right (幾何学博物館) -->
-              <path class="node-line" d="M780,420 C850,480 880,520 920,580" />
-              <path class="node-line node-line--dashed" d="M780,420 C850,480 880,520 920,580" />
+              <path class="node-line" d="M390,450 C340,450 314,450 264,450" />
+              <path class="node-line node-line--dashed" d="M390,450 C340,450 314,450 264,450" />
+              <path class="node-line" d="M390,410 C330,340 330,240 264,175" />
+              <path class="node-line node-line--dashed" d="M390,410 C330,340 330,240 264,175" />
+              <path class="node-line" d="M390,490 C330,560 330,660 264,725" />
+              <path class="node-line node-line--dashed" d="M390,490 C330,560 330,660 264,725" />
+              <path class="node-line" d="M810,450 C860,450 886,450 936,450" />
+              <path class="node-line node-line--dashed" d="M810,450 C860,450 886,450 936,450" />
+              <path class="node-line" d="M810,410 C870,340 870,240 936,175" />
+              <path class="node-line node-line--dashed" d="M810,410 C870,340 870,240 936,175" />
+              <path class="node-line" d="M810,490 C870,560 870,660 936,725" />
+              <path class="node-line node-line--dashed" d="M810,490 C870,560 870,660 936,725" />
             </g>
           </svg>
 
@@ -82,8 +79,19 @@
             </div>
           </div>
 
-          <article class="satellite-card satellite-card--left" data-reveal="orbit-left" style="--orbit-delay:0s">
-            <a class="satellite-inner" href="https://kaikei.family" target="_blank" rel="noopener" aria-label="Kaikei.family を開く">
+          <article class="satellite-card satellite-card--top-left" data-reveal="orbit-left" style="--orbit-delay:0s">
+            <a class="satellite-inner" href="https://tenma325.github.io/PPdevelopment/" target="_blank" rel="noopener" aria-label="devepopment を開く">
+              <h2 class="satellite-title">devepopment</h2>
+              <div class="satellite-media">
+                <img src="./assets/devepopment-thumb.jpg" alt="devepopment サイトのスクリーンショット" loading="eager">
+              </div>
+              <p class="satellite-concept">つくる楽しさに、ときめきを。</p>
+              <span class="satellite-link">サイトを開く →</span>
+            </a>
+          </article>
+
+          <article class="satellite-card satellite-card--left" data-reveal="orbit-left" style="--orbit-delay:.1s">
+            <a class="satellite-inner" href="https://tenma325.github.io/keikei-family/" target="_blank" rel="noopener" aria-label="Kaikei.family を開く">
               <h2 class="satellite-title">Kaikei.family</h2>
               <div class="satellite-media">
                 <img src="./assets/kaikei-thumb.jpg" alt="Kaikei.family サイトのスクリーンショット" loading="eager">
@@ -93,18 +101,7 @@
             </a>
           </article>
 
-          <article class="satellite-card satellite-card--right" data-reveal="orbit-right" style="--orbit-delay:.15s">
-            <a class="satellite-inner" href="https://tenma325.github.io/gyaru-gov/" target="_blank" rel="noopener" aria-label="ギャル行政課 を開く">
-              <h2 class="satellite-title">ギャル行政課</h2>
-              <div class="satellite-media">
-                <img src="./assets/gyaru-gov-thumb.jpg" alt="ギャル行政課 サイトのスクリーンショット" loading="eager">
-              </div>
-              <p class="satellite-concept">かたい役所を、やさしくひらく。</p>
-              <span class="satellite-link">サイトを開く →</span>
-            </a>
-          </article>
-
-          <article class="satellite-card satellite-card--bottom" data-reveal="orbit-up" style="--orbit-delay:.3s">
+          <article class="satellite-card satellite-card--bottom-left" data-reveal="orbit-left" style="--orbit-delay:.2s">
             <a class="satellite-inner" href="https://tenma325.github.io/lumiere-residences/" target="_blank" rel="noopener" aria-label="LUMIÈRE Residences を開く">
               <h2 class="satellite-title">LUMIÈRE Residences</h2>
               <div class="satellite-media">
@@ -115,13 +112,35 @@
             </a>
           </article>
 
-          <article class="satellite-card satellite-card--top" data-reveal="fade-down" style="--orbit-delay:.45s">
-            <a class="satellite-inner" href="https://tenma325.github.io/devepopment/" target="_blank" rel="noopener" aria-label="devepopment を開く">
-              <h2 class="satellite-title">devepopment</h2>
+          <article class="satellite-card satellite-card--top-right" data-reveal="orbit-right" style="--orbit-delay:.3s">
+            <a class="satellite-inner" href="https://tenma325.github.io/geometric-bg-generator/" target="_blank" rel="noopener" aria-label="幾何学博物館 を開く">
+              <h2 class="satellite-title">幾何学博物館</h2>
               <div class="satellite-media">
-                <img src="./assets/devepopment-thumb.jpg" alt="devepopment サイトのスクリーンショット" loading="eager">
+                <img src="./assets/geometric-thumb.svg" alt="幾何学博物館 サイトのビジュアル" loading="eager">
               </div>
-              <p class="satellite-concept">つくる楽しさに、ときめきを。</p>
+              <p class="satellite-concept">名前のないデザインの博物館。</p>
+              <span class="satellite-link">サイトを開く →</span>
+            </a>
+          </article>
+
+          <article class="satellite-card satellite-card--right" data-reveal="orbit-right" style="--orbit-delay:.4s">
+            <a class="satellite-inner" href="https://tenma325.github.io/PPdevelopment/" target="_blank" rel="noopener" aria-label="ギャル行政課 を開く">
+              <h2 class="satellite-title">ギャル行政課</h2>
+              <div class="satellite-media">
+                <img src="./assets/gyaru-gov-thumb.jpg" alt="ギャル行政課 サイトのスクリーンショット" loading="eager">
+              </div>
+              <p class="satellite-concept">かたい役所を、やさしくひらく。</p>
+              <span class="satellite-link">サイトを開く →</span>
+            </a>
+          </article>
+
+          <article class="satellite-card satellite-card--bottom-right" data-reveal="orbit-right" style="--orbit-delay:.5s">
+            <a class="satellite-inner" href="https://tenma325.github.io/typography-portfolio/" target="_blank" rel="noopener" aria-label="静寂と混沌 を開く">
+              <h2 class="satellite-title">静寂と混沌</h2>
+              <div class="satellite-media">
+                <img src="./assets/zen-chaos-thumb.svg" alt="静寂と混沌 サイトのビジュアル" loading="eager">
+              </div>
+              <p class="satellite-concept">デザインとは、シンプルで、カオスだ。</p>
               <span class="satellite-link">サイトを開く →</span>
             </a>
           </article>
@@ -182,7 +201,7 @@
         </header>
         <ol class="works-list">
           <li class="work-item">
-            <a href="https://kaikei.family" target="_blank" rel="noopener">
+            <a href="https://tenma325.github.io/keikei-family/" target="_blank" rel="noopener">
               <em class="work-index">01</em>
               <strong class="work-name">Kaikei.family</strong>
               <span class="work-desc">家族向け家計簿アプリ。パパ・ママ・子どもの支出をひとつのダッシュボードで見える化。</span>
@@ -222,14 +241,24 @@
             <img src="./assets/devepopment-thumb.jpg" alt="devepopment スクリーンショット" loading="lazy">
           </li>
           <li class="work-item">
-            <a href="https://tenma325.github.io/geometry-museum/" target="_blank" rel="noopener">
+            <a href="https://tenma325.github.io/geometric-bg-generator/" target="_blank" rel="noopener">
               <em class="work-index">05</em>
               <strong class="work-name">幾何学博物館</strong>
-              <span class="work-desc">14の展示室で定義から崩壊までを順に提示するインタラクティブWebアプリ。WebGL2シェーダー、Obsidian連携。</span>
+              <span class="work-desc">名前のないデザインの博物館。ドメインワープFBMの流体場をハーフトーン/ディザ/モザイクで描くWebGL2ジェネラティブ・アニメーション。</span>
             </a>
           </li>
           <li class="work-screenshot">
-            <img src="./assets/museum-14.jpg" alt="幾何学博物館 スクリーンショット" loading="lazy">
+            <img src="./assets/geometric-thumb.svg" alt="幾何学博物館 ビジュアル" loading="lazy">
+          </li>
+          <li class="work-item">
+            <a href="https://tenma325.github.io/typography-portfolio/" target="_blank" rel="noopener">
+              <em class="work-index">06</em>
+              <strong class="work-name">静寂と混沌</strong>
+              <span class="work-desc">タイポグラフィ・ポートフォリオ。カーソルが引き直す「静」と「沌」の境界、Blender製の破砕タイポ3D、点と線の星座背景。</span>
+            </a>
+          </li>
+          <li class="work-screenshot">
+            <img src="./assets/zen-chaos-thumb.svg" alt="静寂と混沌 ビジュアル" loading="lazy">
           </li>
         </ol>
       </section>
@@ -246,11 +275,12 @@
 
         <nav class="footer-col">
           <h4>SITES</h4>
-          <a href="https://kaikei.family" target="_blank" rel="noopener">Kaikei.family</a>
-          <a href="https://tenma325.github.io/gyaru-gov/" target="_blank" rel="noopener">ギャル行政課</a>
+          <a href="https://tenma325.github.io/keikei-family/" target="_blank" rel="noopener">Kaikei.family</a>
+          <a href="https://tenma325.github.io/PPdevelopment/" target="_blank" rel="noopener">ギャル行政課</a>
           <a href="https://tenma325.github.io/lumiere-residences/" target="_blank" rel="noopener">LUMIÈRE Residences</a>
-          <a href="https://tenma325.github.io/devepopment/" target="_blank" rel="noopener">devepopment</a>
-          <a href="https://tenma325.github.io/geometry-museum/" target="_blank" rel="noopener">幾何学博物館</a>
+          <a href="https://tenma325.github.io/PPdevelopment/" target="_blank" rel="noopener">devepopment</a>
+          <a href="https://tenma325.github.io/geometric-bg-generator/" target="_blank" rel="noopener">幾何学博物館</a>
+          <a href="https://tenma325.github.io/typography-portfolio/" target="_blank" rel="noopener">静寂と混沌</a>
         </nav>
 
         <div class="footer-col">
