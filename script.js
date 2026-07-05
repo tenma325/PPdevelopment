@@ -174,7 +174,6 @@
       function getBaseTransform(card) {
         if (card.classList.contains('satellite-card--left')) return 'translateY(-50%) translateX(0)';
         if (card.classList.contains('satellite-card--right')) return 'translateY(-50%) translateX(0)';
-        if (card.classList.contains('satellite-card--bottom')) return 'translateX(-50%) translateY(0)';
         return '';
       }
 
