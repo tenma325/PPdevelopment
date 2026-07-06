@@ -98,7 +98,7 @@ body {
   height: 100%;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.55;
+  opacity: 0.8;
 }
 
 /* SVG defs hidden */
@@ -378,14 +378,27 @@ body {
   opacity: 0;
 }
 
-/* two columns of three — computed against the 4/3 stage so nothing
-   overlaps the central card (x 32.5%–67.5%, y ~37%–63%) */
-.satellite-card--top-left { left: 0; top: 2.5%; transform: translateX(-20px); }
-.satellite-card--left { left: 0; top: 50%; transform: translateY(-50%) translateX(-20px); }
-.satellite-card--bottom-left { left: 0; bottom: 2.5%; transform: translateX(-20px); }
-.satellite-card--top-right { right: 0; top: 2.5%; transform: translateX(20px); }
-.satellite-card--right { right: 0; top: 50%; transform: translateY(-50%) translateX(20px); }
-.satellite-card--bottom-right { right: 0; bottom: 2.5%; transform: translateX(20px); }
+/* loose two-columns-of-three: positions are deliberately nudged off-grid
+   and every card levitates on its own phase, so each one reads as floating
+   in space rather than pinned to a layout. Gutters still clear the central
+   card (x 32.5%–67.5%). */
+.satellite-card--top-left { left: 0.6%; top: 4%; transform: translateX(-20px); --float-dur: 6.2s; --float-delay: -1.2s; }
+.satellite-card--left { left: 2%; top: 47%; transform: translateY(-50%) translateX(-20px); --float-dur: 7.4s; --float-delay: -3s; }
+.satellite-card--bottom-left { left: 0.4%; bottom: 3.6%; transform: translateX(-20px); --float-dur: 6.8s; --float-delay: -5s; }
+.satellite-card--top-right { right: 1.8%; top: 2.6%; transform: translateX(20px); --float-dur: 7.1s; --float-delay: -2.2s; }
+.satellite-card--right { right: 0.4%; top: 52%; transform: translateY(-50%) translateX(20px); --float-dur: 6.4s; --float-delay: -4.4s; }
+.satellite-card--bottom-right { right: 2.2%; bottom: 2.4%; transform: translateX(20px); --float-dur: 7.8s; --float-delay: -0.6s; }
+
+/* levitation: `translate`/`rotate` are independent properties, so they
+   compose with the reveal/parallax `transform` and the hover scale */
+.satellite-card {
+  animation: cardFloat var(--float-dur, 7s) ease-in-out var(--float-delay, 0s) infinite;
+}
+
+@keyframes cardFloat {
+  0%, 100% { translate: 0 -6px; rotate: -0.35deg; }
+  50% { translate: 0 8px; rotate: 0.4deg; }
+}
 
 .satellite-card.revealed {
   opacity: 1;
