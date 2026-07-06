@@ -246,8 +246,10 @@ body {
 .neural-surface {
   position: relative;
   width: min(1200px, 100%);
-  aspect-ratio: 4 / 3; /* taller stage: 6 satellites in two columns of three */
-  max-height: 92vh;
+  /* 15/14: tall enough for three rows of the enlarged (25%) cards.
+     No max-height cap — card heights scale with width, so capping the
+     stage height would break the row spacing and cause overlaps. */
+  aspect-ratio: 15 / 14;
   display: grid;
   place-items: center;
 }
@@ -293,7 +295,7 @@ body {
 
 .central-card {
   position: relative;
-  width: min(460px, 40%);
+  width: min(460px, 36%);
   aspect-ratio: 16 / 10;
   display: grid;
   place-items: center;
@@ -374,7 +376,7 @@ body {
 .satellite-card {
   position: absolute;
   z-index: 3;
-  width: 22%;
+  width: 25%;
   opacity: 0;
 }
 
@@ -382,12 +384,12 @@ body {
    and every card levitates on its own phase, so each one reads as floating
    in space rather than pinned to a layout. Gutters still clear the central
    card (x 32.5%–67.5%). */
-.satellite-card--top-left { left: 0.6%; top: 4%; transform: translateX(-20px); --float-dur: 6.2s; --float-delay: -1.2s; }
-.satellite-card--left { left: 2%; top: 47%; transform: translateY(-50%) translateX(-20px); --float-dur: 7.4s; --float-delay: -3s; }
-.satellite-card--bottom-left { left: 0.4%; bottom: 3.6%; transform: translateX(-20px); --float-dur: 6.8s; --float-delay: -5s; }
-.satellite-card--top-right { right: 1.8%; top: 2.6%; transform: translateX(20px); --float-dur: 7.1s; --float-delay: -2.2s; }
+.satellite-card--top-left { left: 0.6%; top: 3%; transform: translateX(-20px); --float-dur: 6.2s; --float-delay: -1.2s; }
+.satellite-card--left { left: 2%; top: 50%; transform: translateY(-50%) translateX(-20px); --float-dur: 7.4s; --float-delay: -3s; }
+.satellite-card--bottom-left { left: 0.4%; bottom: 2.6%; transform: translateX(-20px); --float-dur: 6.8s; --float-delay: -5s; }
+.satellite-card--top-right { right: 1.8%; top: 1.8%; transform: translateX(20px); --float-dur: 7.1s; --float-delay: -2.2s; }
 .satellite-card--right { right: 0.4%; top: 52%; transform: translateY(-50%) translateX(20px); --float-dur: 6.4s; --float-delay: -4.4s; }
-.satellite-card--bottom-right { right: 2.2%; bottom: 2.4%; transform: translateX(20px); --float-dur: 7.8s; --float-delay: -0.6s; }
+.satellite-card--bottom-right { right: 2.2%; bottom: 1.2%; transform: translateX(20px); --float-dur: 7.8s; --float-delay: -0.6s; }
 
 /* levitation: `translate`/`rotate` are independent properties, so they
    compose with the reveal/parallax `transform` and the hover scale */
@@ -396,8 +398,8 @@ body {
 }
 
 @keyframes cardFloat {
-  0%, 100% { translate: 0 -6px; rotate: -0.35deg; }
-  50% { translate: 0 8px; rotate: 0.4deg; }
+  0%, 100% { translate: -5px -12px; rotate: -0.5deg; }
+  50% { translate: 6px 14px; rotate: 0.6deg; }
 }
 
 .satellite-card.revealed {
