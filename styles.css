@@ -384,12 +384,14 @@ body {
    and every card levitates on its own phase, so each one reads as floating
    in space rather than pinned to a layout. Gutters still clear the central
    card (x 32.5%–67.5%). */
-.satellite-card--top-left { left: 0.6%; top: 3%; transform: translateX(-20px); --float-dur: 6.2s; --float-delay: -1.2s; }
-.satellite-card--left { left: 2%; top: 50%; transform: translateY(-50%) translateX(-20px); --float-dur: 7.4s; --float-delay: -3s; }
-.satellite-card--bottom-left { left: 0.4%; bottom: 2.6%; transform: translateX(-20px); --float-dur: 6.8s; --float-delay: -5s; }
-.satellite-card--top-right { right: 1.8%; top: 1.8%; transform: translateX(20px); --float-dur: 7.1s; --float-delay: -2.2s; }
-.satellite-card--right { right: 0.4%; top: 52%; transform: translateY(-50%) translateX(20px); --float-dur: 6.4s; --float-delay: -4.4s; }
-.satellite-card--bottom-right { right: 2.2%; bottom: 1.2%; transform: translateX(20px); --float-dur: 7.8s; --float-delay: -0.6s; }
+/* width と --tilt もカードごとに散らし、サイズの不揃いで浮遊感を強める */
+.satellite-card--top-left { left: 0.6%; top: 3%; width: 23.5%; transform: translateX(-20px); --float-dur: 6.2s; --float-delay: -1.2s; --tilt: -1.2deg; }
+.satellite-card--left { left: 2%; top: 50%; width: 26.5%; transform: translateY(-50%) translateX(-20px); --float-dur: 7.4s; --float-delay: -3s; --tilt: 0.9deg; }
+.satellite-card--bottom-left { left: 0.4%; bottom: 2.6%; width: 24%; transform: translateX(-20px); --float-dur: 6.8s; --float-delay: -5s; --tilt: -0.7deg; }
+.satellite-card--top-right { right: 1.8%; top: 1.8%; width: 26%; transform: translateX(20px); --float-dur: 7.1s; --float-delay: -2.2s; --tilt: 1.3deg; }
+.satellite-card--right { right: 0.4%; top: 52%; width: 23%; transform: translateY(-50%) translateX(20px); --float-dur: 6.4s; --float-delay: -4.4s; --tilt: -1deg; }
+.satellite-card--bottom-right { right: 2.2%; bottom: 1.2%; width: 25.5%; transform: translateX(20px); --float-dur: 7.8s; --float-delay: -0.6s; --tilt: 0.8deg; }
+.satellite-card--bottom { left: 50%; bottom: 0.4%; width: 22.5%; transform: translateX(-50%) translateY(20px); --float-dur: 8.4s; --float-delay: -3.6s; --tilt: -1.4deg; }
 
 /* levitation: `translate`/`rotate` are independent properties, so they
    compose with the reveal/parallax `transform` and the hover scale */
@@ -398,8 +400,8 @@ body {
 }
 
 @keyframes cardFloat {
-  0%, 100% { translate: -5px -12px; rotate: -0.5deg; }
-  50% { translate: 6px 14px; rotate: 0.6deg; }
+  0%, 100% { translate: -5px -12px; rotate: calc(var(--tilt, 0deg) - 0.5deg); }
+  50% { translate: 6px 14px; rotate: calc(var(--tilt, 0deg) + 0.6deg); }
 }
 
 .satellite-card.revealed {
@@ -413,6 +415,9 @@ body {
 }
 .satellite-card--bottom-right.revealed {
   transform: translateY(0);
+}
+.satellite-card--bottom.revealed {
+  transform: translateX(-50%) translateY(0);
 }
 
 .satellite-inner {
