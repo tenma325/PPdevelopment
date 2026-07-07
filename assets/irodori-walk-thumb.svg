@@ -1,53 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="彩り歩き — 白黒の街に虹色の散歩軌跡が描かれるサムネイル">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="あなたの歩みで世界に彩りを — 日本地図の上に彩りのタイポグラフィ">
   <defs>
-    <linearGradient id="iw-rainbow" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#ff6f91"/>
-      <stop offset=".2" stop-color="#ffb347"/>
-      <stop offset=".4" stop-color="#f2c94c"/>
-      <stop offset=".6" stop-color="#3cc6a6"/>
-      <stop offset=".8" stop-color="#4f9df7"/>
-      <stop offset="1" stop-color="#a06ce4"/>
-    </linearGradient>
+    <radialGradient id="iw-wash" cx=".5" cy=".5" r=".5">
+      <stop offset=".35" stop-color="#fdfbf7" stop-opacity=".92"/>
+      <stop offset="1" stop-color="#fdfbf7" stop-opacity="0"/>
+    </radialGradient>
   </defs>
 
-  <!-- 白黒の街 -->
-  <rect width="640" height="400" fill="#f2f2f2"/>
-  <g stroke="#e3e3e3" stroke-width="2">
-    <path d="M0 60H640M0 130H640M0 200H640M0 270H640M0 340H640"/>
-    <path d="M70 0V400M150 0V400M230 0V400M310 0V400M390 0V400M470 0V400M550 0V400"/>
-  </g>
-  <g stroke="#d6d6d6" stroke-width="10" stroke-linecap="round">
-    <path d="M0 200 H640"/>
-    <path d="M310 0 V400"/>
-  </g>
-  <g stroke="#ffffff" stroke-width="6" stroke-linecap="round">
-    <path d="M0 200 H640"/>
-    <path d="M310 0 V400"/>
-  </g>
-  <!-- 公園と水辺(灰色の世界) -->
-  <rect x="472" y="62" width="76" height="66" rx="8" fill="#e9e9e9"/>
-  <rect x="72" y="272" width="76" height="66" rx="8" fill="#dcdcdc"/>
+  <!-- 海と大陸 -->
+  <rect width="640" height="400" fill="#eceeef"/>
+  <path d="M0 0 H210 C150 80 160 180 100 250 C70 290 40 340 0 360 Z" fill="#e2e2e2"/>
+  <path d="M0 380 C60 360 120 380 150 400 H0 Z" fill="#e2e2e2"/>
 
-  <!-- 歩いた道 = 虹の軌跡(描かれ続けるループ) -->
-  <path id="iw-trail" d="M70 340 L150 340 L150 270 L230 270 L230 200 L390 200 L390 130 L470 130 L470 60 L550 60"
-    fill="none" stroke="url(#iw-rainbow)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"
-    stroke-dasharray="980" stroke-dashoffset="980">
-    <animate attributeName="stroke-dashoffset" values="980;0;0" keyTimes="0;.7;1" dur="6s" repeatCount="indefinite"/>
-  </path>
+  <!-- 日本列島(様式化) -->
+  <!-- 北海道: 青 -->
+  <path d="M508 64 C530 52 556 56 566 74 C576 92 560 108 540 112 C550 120 542 132 528 128 C512 124 500 132 492 120 C482 104 490 74 508 64 Z" fill="#8ecbf5"/>
+  <!-- 東北: ピンク -->
+  <path d="M492 140 C510 136 522 150 518 172 C514 192 506 210 494 222 C482 210 476 188 478 166 C480 152 484 144 492 140 Z" fill="#f6b6c8"/>
+  <!-- 関東〜中部: グレーの本州 -->
+  <path d="M478 228 C468 250 448 268 424 278 C400 288 376 292 356 300 C336 308 318 312 304 306 C290 300 292 286 306 278 C330 264 356 258 380 248 C404 238 428 224 446 210 C460 198 474 210 478 228 Z" fill="#dcdcdc"/>
+  <!-- 中部の彩色パッチ -->
+  <path d="M420 262 C432 254 446 258 448 270 C450 282 438 290 426 288 C414 286 412 270 420 262 Z" fill="#cdeccc"/>
+  <path d="M392 276 C404 270 414 276 414 286 C414 296 402 302 392 298 C382 294 384 282 392 276 Z" fill="#d9c8ef"/>
+  <!-- 関西〜中国: パステル -->
+  <path d="M352 296 C364 290 376 294 376 304 C376 314 362 320 350 316 C340 312 342 302 352 296 Z" fill="#f9d9a8"/>
+  <path d="M312 304 C326 298 340 302 340 312 C340 322 324 328 310 322 C300 318 302 310 312 304 Z" fill="#b9e3f4"/>
+  <!-- 四国 -->
+  <path d="M330 330 C342 324 356 328 356 338 C356 348 340 352 328 346 C320 342 322 334 330 330 Z" fill="#cdeccc"/>
+  <!-- 九州 -->
+  <path d="M276 322 C290 314 304 320 304 332 C304 346 288 354 274 348 C262 342 264 330 276 322 Z" fill="#e7c4e0"/>
+  <path d="M282 358 C290 354 298 358 297 366 C296 374 286 376 280 371 C274 366 276 361 282 358 Z" fill="#f6b6c8"/>
 
-  <!-- 現在地ドット -->
-  <circle cx="550" cy="60" r="16" fill="#4f9df7" opacity=".22">
-    <animate attributeName="r" values="12;20;12" dur="1.8s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="550" cy="60" r="8" fill="#4f9df7" stroke="#ffffff" stroke-width="3"/>
+  <!-- 東京から放たれる彩りの脈 -->
+  <g fill="none" stroke-width="3" stroke-linecap="round">
+    <path d="M436 240 C420 224 408 224 396 210" stroke="#ff6f91"/>
+    <path d="M436 240 C444 218 438 202 448 186" stroke="#ffb347"/>
+    <path d="M436 240 C458 232 468 216 486 214" stroke="#f2c94c"/>
+    <path d="M436 240 C452 254 468 252 482 262" stroke="#3cc6a6"/>
+    <path d="M436 240 C428 260 414 264 408 280" stroke="#4f9df7"/>
+    <path d="M436 240 C418 244 406 240 392 248" stroke="#a06ce4"/>
+    <path d="M436 240 C446 226 462 228 470 216" stroke="#ff6f91" stroke-width="2"/>
+    <path d="M436 240 C430 226 434 212 426 200" stroke="#3cc6a6" stroke-width="2"/>
+    <animate attributeName="stroke-dasharray" values="0 90;90 0" dur="3.2s" repeatCount="indefinite"/>
+  </g>
 
   <!-- インクの飛沫 -->
-  <circle cx="180" cy="95" r="9" fill="#ffb347" opacity=".85"/>
-  <circle cx="205" cy="112" r="4" fill="#ff6f91" opacity=".8"/>
-  <circle cx="430" cy="305" r="11" fill="#a06ce4" opacity=".75"/>
-  <circle cx="455" cy="288" r="5" fill="#3cc6a6" opacity=".85"/>
+  <circle cx="128" cy="128" r="12" fill="#ff8fab" opacity=".9"/>
+  <circle cx="112" cy="146" r="4" fill="#ff6f91" opacity=".8"/>
+  <circle cx="180" cy="236" r="8" fill="#8ecbf5"/>
+  <circle cx="452" cy="112" r="7" fill="#5fd0b5"/>
+  <circle cx="520" cy="250" r="6" fill="#4f9df7" opacity=".85"/>
+  <circle cx="560" cy="150" r="8" fill="#3a3633"/>
+  <circle cx="470" cy="86" r="6" fill="#615c57"/>
+  <circle cx="238" cy="182" r="6" fill="#ffd166" opacity=".9"/>
+  <circle cx="398" cy="120" r="9" fill="#c9aef0" opacity=".8"/>
 
-  <!-- コンセプト -->
-  <text x="24" y="382" font-family="'Zen Kaku Gothic New','Hiragino Sans',sans-serif"
-    font-size="21" font-weight="700" fill="#1f1b16">あなたの歩みで世界に彩りを</text>
+  <!-- 白いにじみ + コンセプトタイポ -->
+  <ellipse cx="330" cy="196" rx="280" ry="128" fill="url(#iw-wash)"/>
+  <g font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif"
+     font-weight="900" font-size="57" text-anchor="middle" letter-spacing="1">
+    <text x="330" y="180">
+      <tspan fill="#3cc6a6">あ</tspan><tspan fill="#1f1b16">な</tspan><tspan fill="#ff6f91">た</tspan><tspan fill="#1f1b16">の</tspan><tspan fill="#1f1b16">歩</tspan><tspan fill="#3cc6a6">み</tspan><tspan fill="#1f1b16">で</tspan>
+    </text>
+    <text x="330" y="248">
+      <tspan fill="#4f9df7">世</tspan><tspan fill="#1f1b16">界</tspan><tspan fill="#1f1b16">に</tspan><tspan fill="#1f1b16">彩</tspan><tspan fill="#3cc6a6">り</tspan><tspan fill="#f2c94c">を</tspan>
+    </text>
+  </g>
 </svg>
