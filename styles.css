@@ -419,6 +419,12 @@ body {
 .satellite-card--bottom.revealed {
   transform: translateX(-50%) translateY(0);
 }
+/* 下中央カードはタイトルが長いので折返しを許可 */
+.satellite-card--bottom .satellite-title {
+  white-space: normal;
+  font-size: 1.1rem;
+  line-height: 1.35;
+}
 
 .satellite-inner {
   display: block;
