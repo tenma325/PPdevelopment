@@ -64,9 +64,10 @@
               <path class="node-line node-line--dashed" d="M805,520 C870,420 870,290 895,195" />
               <path class="node-line" d="M805,600 C870,700 870,830 892,925" />
               <path class="node-line node-line--dashed" d="M805,600 C870,700 870,830 892,925" />
-              <!-- Center to Bottom (彩り歩き) -->
-              <path class="node-line" d="M600,665 C600,730 600,790 600,855" />
-              <path class="node-line node-line--dashed" d="M600,665 C600,730 600,790 600,855" />
+              <!-- Center to Bottom (彩り歩き): 完全垂直だと gold-stroke の
+                   objectBoundingBox グラデーションが消えるため、S字に振る -->
+              <path class="node-line" d="M600,665 C562,720 640,795 600,856" />
+              <path class="node-line node-line--dashed" d="M600,665 C562,720 640,795 600,856" />
             </g>
           </svg>
 
